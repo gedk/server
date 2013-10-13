@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<servlet>
+		<description></description>
+		<display-name>AppServlet</display-name>
+		<servlet-name>AppServlet</servlet-name>
+		<servlet-class>cn.gedk.core.AppServlet</servlet-class>
+	</servlet>
+	<resource-ref>
+		<res-ref-name>jdbc/server</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<servlet-mapping>
+		<servlet-name>AppServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<listener>
+	    <listener-class>cn.gedk.common.listeners.CommonListener</listener-class>
+	</listener>
+	<listener>
+    	<listener-class>cn.gedk.common.listeners.ApplicationListener</listener-class>
+  	</listener>
+</web-app>

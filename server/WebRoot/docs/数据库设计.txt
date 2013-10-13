@@ -1,0 +1,110 @@
+/*********************************系统权限***********************************/
+1.T_MENU(菜单)
+  ID 
+  TEXT 菜单名称
+  LEAF 是否有子节点
+  ICON_CLS 菜单图标
+  APP_CLASS 菜单所对应的js类名称
+  SCRIPT 菜单所对应的js文件路径
+  PARENT_ID 父菜单id
+  LIST_ORDER 排序编号
+
+2.T_BUTTON(按钮)
+  ID
+  MENU_ID 按钮所属菜单ID
+  BUTTON_NAME 按钮名称
+  BUTTON_DESC 按钮描述
+  
+3.T_ROLE(角色)
+  ID 编号
+  NAME 角色名称
+  
+4.T_MENU_PERMISSION(角色与菜单权限关系对应表)
+  ID 编号
+  ROLE_ID 角色ID 
+  MENU_ID 菜单ID
+
+5.T_BUTTON_PERMISSION(角色与按钮权限关系对应表)
+  ID 编号
+  ROLE_ID 角色ID
+  BUTTON_ID 按钮ID
+  
+6.T_DEPARTMENT(部门表)
+  ID 编号
+  NAME 部门名称
+  PARENT_ID 上级部门ID
+  
+7.T_EMPLOYEE(员工表)
+  ID
+  NAME 昵称
+  LOGIN_NAME 系统登录名
+  PASSWORD 系统登录密码
+  MOBILE_PHONE 联系电话
+  DEPARTMENT_ID 所属部门ID
+
+8.T_ALL_TABLE(系统表)
+  ID 编号
+  TABLE_NAME 表名 
+  TABLE_DESC 表描述
+  
+9.T_TABLE_PERMISSION(数据权限对应表)
+  ID
+  ROLE_ID 角色ID
+  TABLE_NAME 表名
+  EMPLOYEE_ID 员工名称
+  START_DATE 数据录入开始时间
+  END_DATE 数据录入结束时间
+  
+
+
+  
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13807736096
+Xifashouyi168
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
