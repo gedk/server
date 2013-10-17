@@ -2,7 +2,7 @@
  * author:gedk
  * description:应用头部
 ************************************************/
-Ext.define('Color8.view.BasePanel',{
+Ext.define('App.view.BasePanel',{
     extend: 'Ext.panel.Panel',
     xtype: 'basePanel',
     layout:'fit',
@@ -58,7 +58,7 @@ Ext.define('Color8.view.BasePanel',{
     	this.items = [grid];
     	
     	this.callParent(arguments);
-    	var app = Color8.getApplication();
+    	var app = App.getApplication();
     	if(!app.hasController('Gedk')){
     	   app.addController('Gedk');
     	}

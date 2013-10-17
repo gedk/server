@@ -1,3 +1,7 @@
+/****************************************************
+ * author:gedk
+ * description:界面主入口
+ ****************************************************/
 Ext.require('Ext.app.Application', function() {
 	Ext.app.Application.addMembers({
 		newControllerAdded : function(idx, cntr) {
@@ -12,7 +16,7 @@ Ext.require('Ext.app.Application', function() {
 	});
 });
 Ext.application({
-	name : 'Color8',
+	name : 'App',
 	appFolder : "admin/app",
 	autoCreateViewport : true,
 	controllers : [ 'Main' ]

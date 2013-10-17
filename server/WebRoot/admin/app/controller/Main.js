@@ -2,7 +2,7 @@
  * author:gedk
  * description:主控制器
  ***************************************/
-Ext.define('Color8.controller.Main', {
+Ext.define('App.controller.Main', {
 	extend : 'Ext.app.Controller',
 	views : ['AppHeader','BasePanel'],
 	

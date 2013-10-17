@@ -16,9 +16,9 @@ var main = new EasyJF.Ext.MainTabPanel({
 		title : '首页'
 	} ]
 });
-Ext.define('Color8.view.Viewport', {
+Ext.define('App.view.Viewport', {
 	extend : 'Ext.container.Viewport',
-	requires : [ 'Color8.view.AppHeader', 'Color8.view.Menu' ],
+	requires : [ 'App.view.AppHeader', 'App.view.Menu' ],
 	layout : 'border',
 	items : [ {
 		region : 'north',
@@ -33,11 +33,12 @@ Ext.define('Color8.view.Viewport', {
 			var leaf = record.get("leaf");
 			var text = record.get("text");
 			var script = record.get("script");
+			var app_class = record.get("appclass");
 			if(leaf&&script){
-				Ext.require("Color8.view.BasePanel",function(){
-					var userPanel = main.child('basePanel');
+				Ext.require(script,function(){
+					var userPanel = main.child(app_class);
                     if(!userPanel){
-                        var userPanel =  Ext.widget('basePanel',{title:text});
+                        var userPanel =  Ext.widget(app_class,{title:text});
                         main.add(userPanel);
                         main.setActiveTab(userPanel);
                     }else{
@@ -50,7 +51,7 @@ Ext.define('Color8.view.Viewport', {
 		}
 	},main,{
 		xtype : 'toolbar',
-		items : [ "当前用户：" ],
+		items : [ "当前用户：administrator" ],
 		height : 20,
 		region : 'south',
 		border : false

@@ -13,25 +13,20 @@ import java.util.Map;
 
 import cn.gedk.core.Context;
 import cn.gedk.utils.Constant;
-
 /**
  * 数据库操作工具类
- * 
  * @className:DBUtil
  * @author ：gedk
  * @创建时间：2013-9-27
  */
 public class DBUtil {
-	/**
-	 * 获取数据库连接
-	 * 
+	/**获取数据库连接
 	 * @return 返回获取到的数据库连接
 	 */
-	public static Connection getConnetion() {
+	public static Connection getConnetion(){
 		Connection con = DBPool.getConnection();
 		return con;
 	}
-
 	public static List<Map<String, Object>> query(String sql, Connection conn) {
 		List<Map<String, Object>> result = new ArrayList<Map<String, Object>>();
 		if (conn == null)
@@ -47,8 +42,7 @@ public class DBUtil {
 				ResultSetMetaData rsm = rs.getMetaData();
 				for (int i = 1; i <= rsm.getColumnCount(); i++) {
 					r.put(rsm.getColumnName(i).toLowerCase(), rs.getObject(i));
-				}
-				;
+				};
 				result.add(r);
 			}
 		} catch (SQLException e) {
@@ -144,7 +138,6 @@ public class DBUtil {
 
 	/**
 	 * 分页查询
-	 * 
 	 * @param sql
 	 * @param start
 	 * @param limit
@@ -438,12 +431,11 @@ public class DBUtil {
 	/**
 	 * 获取所有表名称
 	 */
-	public static void getAllTables() {
+	public static void getAllTables(){
 		Connection con = getConnetion();
 		try {
 			DatabaseMetaData meta = con.getMetaData();
-			ResultSet rs = meta.getTables(null, null, null,
-					new String[] { "TABLE" });
+			ResultSet rs = meta.getTables(null, null, null,new String[] { "TABLE" });
 			while (rs.next()) {
 				System.out.println("表名：" + rs.getString(3));
 			}
@@ -456,7 +448,7 @@ public class DBUtil {
 			}
 			e.printStackTrace();
 		} finally {
-			if (con != null) {
+			if (con != null){
 				try {
 					con.close();
 				} catch (SQLException e) {

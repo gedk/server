@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.x-tree-icon-parent {
+	background-image:url("/images/system/ext/tag_blue.gif")!important;
+}
+.x-tree-icon-leaf{
+	background-image:url("/images/system/ext/tag_blue3.gif")!important;
+}
+
+.add {
+	background: url(/images/system/ext/add.png) no-repeat 0 2px !important;
+	padding-left:14px;
+}
+.edit {
+	background: url(/images/system/ext/edit.png) no-repeat 0 2px !important;
+	padding-left:14px;
+}
+.remove {
+	background: url(/images/system/ext/delete.png) no-repeat 0 2px !important;
+	padding-left:14px;
+}
+.search {
+	background: url(/images/system/ext/search.png) no-repeat 0 2px !important;
+	padding-left:14px;
+}
+.refresh {
+	background: url(/images/system/ext/refresh.gif) no-repeat 0 2px !important;
+	padding-left:14px;
+}

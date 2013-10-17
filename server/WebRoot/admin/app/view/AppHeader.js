@@ -2,7 +2,7 @@
  * author:gedk
  * description:应用头部
 ************************************************/
-Ext.define('Color8.view.AppHeader',{
+Ext.define('App.view.AppHeader',{
     extend: 'Ext.panel.Panel',
     xtype: 'appHeader',
     border:false,

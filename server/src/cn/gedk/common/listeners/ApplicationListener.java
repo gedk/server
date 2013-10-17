@@ -14,7 +14,7 @@ public class ApplicationListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		Properties prop = new Properties();
-		InputStream in = Object.class.getResourceAsStream("/project.properties");
+		InputStream in = this.getClass().getResourceAsStream("/project.properties");
 		try {
 			prop.load(in);
 			Set<?> keyset = prop.keySet();

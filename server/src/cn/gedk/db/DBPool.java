@@ -33,7 +33,7 @@ public class DBPool {
 	 public static Connection getConnection() {
 		try {
 			synchronized(DBPool.class){
-				ds = (DataSource) CTT.lookup("jdbc/8color");
+				ds = (DataSource) CTT.lookup("jdbc/server");
 				conn = ds.getConnection();
 				while(true){
 					if(conn != null) break;
@@ -49,7 +49,6 @@ public class DBPool {
 		}
 		return null;
 	}
-	
 	/**
 	 * 根据jni名称获取不同的数据库连接
 	 * @param name jni名称
